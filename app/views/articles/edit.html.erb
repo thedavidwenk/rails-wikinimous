@@ -1,15 +1,6 @@
 <h1 class="mt-4">Edit <%= @article.title %></h1>
 
-<div>
-  <%= form_with model: @article do |t| %>
-    <%= t.label :title, { class: "form-label mt-4"} %>
-    <%= t.text_field :title, { class: "form-control", placeholder: "Your Title" } %>
-    <%= t.label :content, { class: "form-label mt-4"} %>
-    <%= t.text_area :content, { class: "form-control", placeholder: "Your Content", rows:"4" } %>
-    <%= t.submit class: "btn btn-primary mt-3"%>
-  <% end %>
-</div>
-
+<%= render 'form', article: @article %>
 
 <hr>
 <%= link_to "Back to Article View", "/articles/#{@article.id}" %>
