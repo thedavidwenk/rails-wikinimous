@@ -1,6 +1,9 @@
-<h1 class="mt-4">Create New Article</h1>
-
-<%= render 'form', article: @article %>
-
-<hr>
-<%= link_to "Back to Articles", "/articles" %>
+<div class="mt-4">
+  <div>
+    <a href="/articles">
+      <i class="fa-solid fa-arrow-left-long" aria-hidden="true"></i> Back to All Articles
+    </a>
+  </div> 
+  <h1 class="mt-2"><strong>Create a New Article</strong></h1>
+  <%= render 'form', article: @article %>
+</div>

@@ -1,8 +1,10 @@
 <div class="mt-4">
   <div>
-    <a href="/articles" class="fa-solid fa-arrow-left-long"></a>
+    <a href="/articles">
+      <i class="fa-solid fa-arrow-left-long" aria-hidden="true"></i> Back to All Articles
+    </a>
   </div> 
-  <h1 class="mt-1"><strong><%= @article.title %></strong></h1>
+  <h1 class="mt-2"><strong><%= @article.title %></strong></h1>
   <div class="d-flex justify-content-end">
     <%= link_to "", "/articles/#{@article.id}/edit", class: "fa-solid fa-pen-to-square mx-1" %>
     <%= link_to "", "#{@article.id}", class: "fa-solid fa-trash mx-1" , data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} %>
@@ -10,4 +12,6 @@
   <hr>
   <p><%= @article.content %></p>
 </div>
+
+
 
