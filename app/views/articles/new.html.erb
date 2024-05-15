@@ -1,12 +1,12 @@
-<h1>Create New Article</h1>
+<h1 class="mt-4">Create New Article</h1>
 
 <div>
   <%= form_with model: @article do |t| %>
-    <%= t.label :title %>
-    <%= t.text_field :title %>
-    <%= t.label :content %>
-    <%= t.text_area(:content, cols: 40, rows: 10) %>
-    <%= t.submit %>
+    <%= t.label :title, { class: "form-label mt-4"} %>
+    <%= t.text_field :title, { class: "form-control", placeholder: "Your Title" } %>
+    <%= t.label :content, { class: "form-label mt-4"} %>
+    <%= t.text_area :content, { class: "form-control", placeholder: "Your Content", rows:"4" } %>
+    <%= t.submit class: "btn btn-primary mt-3"%>
   <% end %>
 </div>
 
