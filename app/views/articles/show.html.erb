@@ -1,3 +1,9 @@
 <h1><%= @article.title %></h1>
+<%= link_to "Edit", "/articles/#{@article.id}/edit" %>
+<%= link_to "Delete", "#{@article.id}", class: "fa-solid fa-trash" , data: {turbo_method: :delete, turbo_confirm: "Are your sure?"} %>
 <hr>
 <p><%= @article.content %></p>
+
+
+<%= link_to "Back to all Articles", "/articles" %>
+

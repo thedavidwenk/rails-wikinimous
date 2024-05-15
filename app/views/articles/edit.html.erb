@@ -1,2 +1,15 @@
-<h1>Articles#edit</h1>
-<p>Find me in app/views/articles/edit.html.erb</p>
+<h1>Edit <%= @article.title %></h1>
+
+<div>
+  <%= form_with model: @article do |t| %>
+    <%= t.label :title %>
+    <%= t.text_field :title %>
+    <%= t.label :content %>
+    <%= t.text_area(:content, cols: 40, rows: 10) %>
+    <%= t.submit %>
+  <% end %>
+</div>
+
+
+<hr>
+<%= link_to "Back to Article View", "/articles/#{@article.id}" %>
