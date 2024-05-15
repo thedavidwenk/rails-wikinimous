@@ -7,4 +7,21 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   # root "posts#index"
+
+    # show all tasks
+  get "/articles", to: "articles#index"
+
+  # create a new task 
+  post "/articles", to: "articles#create"
+  get "/articles/new", to: "articles#new"
+
+  # show one / read one 
+  get "/articles/:id", to: "articles#show", as: "article"
+
+  # edit task
+  get "articles/:id/edit", to: "articles#edit"
+  patch "articles/:id", to: "articles#update"
+
+  # delete 
+  delete "articles/:id", to: "articles#destroy"
 end

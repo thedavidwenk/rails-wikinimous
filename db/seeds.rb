@@ -7,3 +7,14 @@
 #   ["Action", "Comedy", "Drama", "Horror"].each do |genre_name|
 #     MovieGenre.find_or_create_by!(name: genre_name)
 #   end
+
+require 'faker'
+
+puts "creating new articles!"
+testOne = Article.create(title: Faker::Hipster.word, content: Faker::Quote.famous_last_words)
+puts "1!"
+testTwo = Article.create(title: Faker::Hipster.word, content: Faker::Quote.famous_last_words)
+puts "2!"
+testThree = Article.create(title: Faker::Hipster.word, content: Faker::Quote.famous_last_words)
+puts "3!"
+puts "Done!"
